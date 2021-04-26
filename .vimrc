@@ -65,6 +65,8 @@ Plugin 'preservim/nerdtree'
 Plugin 'fatih/vim-go'
 Plugin 'blueshirts/darcula'
 Plugin 'vim-airline/vim-airline'
+Plugin 'preservim/nerdcommenter'
+Plugin 'ekalinin/Dockerfile.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -76,3 +78,8 @@ endif
 colorscheme darcula
 
 map <C-g> :NERDTreeToggle<CR>
+
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+map <C-h> <C-w>h
