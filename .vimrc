@@ -67,6 +67,7 @@ Plugin 'blueshirts/darcula'
 Plugin 'vim-airline/vim-airline'
 Plugin 'preservim/nerdcommenter'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'neoclide/coc.nvim'
 
 call vundle#end()
 filetype plugin indent on
@@ -78,8 +79,14 @@ endif
 colorscheme darcula
 
 map <C-g> :NERDTreeToggle<CR>
+map // <plug>NERDCommenterToggle
 
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 map <C-h> <C-w>h
+
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+inoremap <expr> <Space> pumvisible() ? "\<C-y> " : "\<Space>"
+inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<Tab>"
