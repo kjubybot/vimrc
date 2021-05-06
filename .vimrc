@@ -63,6 +63,10 @@ endif
 
 colorscheme darcula
 
+"airline separators
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+
 "NERDTree and NERDCommenter
 map <C-g> :NERDTreeToggle<CR>
 map // <plug>NERDCommenterToggle
@@ -80,5 +84,5 @@ inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<Tab>"
 
 "Terminal
-noremap <F12> :vsp<CR>:terminal<CR>i
+noremap <F12> :bo :vsp<CR>:terminal<CR>i
 tnoremap <ESC> <C-\><C-n>
