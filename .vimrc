@@ -39,6 +39,8 @@ set smartindent
 "Show whitespaces
 set list
 
+set encoding=UTF-8
+
 set nocompatible
 filetype off
 
@@ -84,5 +86,5 @@ inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<Tab>"
 
 "Terminal
-noremap <F12> :bo :vsp<CR>:terminal<CR>i
+noremap <F12> :tabnew<CR>:terminal<CR>i
 tnoremap <ESC> <C-\><C-n>
