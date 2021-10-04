@@ -18,6 +18,8 @@ set nu
 set nuw=4
 "Scroll offset
 set so=5
+"Horizontal scroll offset
+set siso=16
 "New window below
 set sb
 "Break line char
