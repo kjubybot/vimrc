@@ -26,7 +26,7 @@ set sbr=>\
 set spr
 "Wrap
 set ww=b,s
-set wrap
+set nowrap
 "Size of indent
 set tabstop=4
 "Shift width
