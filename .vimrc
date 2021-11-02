@@ -27,7 +27,7 @@ set sbr=>\
 "New window right
 set spr
 "Wrap
-set ww=b,s
+"set ww=b,s
 set nowrap
 "Size of indent
 set tabstop=4
@@ -40,8 +40,6 @@ set smartindent
 
 "Show whitespaces
 set list
-
-set encoding=UTF-8
 
 set nocompatible
 filetype off
@@ -57,6 +55,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'preservim/nerdcommenter'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'neoclide/coc.nvim'
+Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()
 filetype plugin indent on
@@ -88,5 +87,5 @@ inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<Tab>"
 
 "Terminal
-noremap <F12> :tabnew<CR>:terminal<CR>i
+noremap <F12> :bo :tabnew<CR>:terminal<CR>i
 tnoremap <ESC> <C-\><C-n>
