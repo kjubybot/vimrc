@@ -50,12 +50,16 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'fatih/vim-go'
-Plugin 'blueshirts/darcula'
 Plugin 'vim-airline/vim-airline'
 Plugin 'preservim/nerdcommenter'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'neoclide/coc.nvim'
 Plugin 'ryanoasis/vim-devicons'
+
+Plugin 'blueshirts/darcula'
+Plugin 'ayu-theme/ayu-vim'
+Plugin 'tristen/superman'
+Plugin 'fcpg/vim-fahrenheit'
 
 call vundle#end()
 filetype plugin indent on
@@ -64,7 +68,8 @@ if exists('+termguicolors')
     set termguicolors
 endif
 
-colorscheme darcula
+let ayucolor="dark"
+colorscheme ayu
 
 "airline separators
 let g:airline_left_sep = ''
