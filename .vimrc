@@ -91,6 +91,9 @@ inoremap <expr> <Space> pumvisible() ? "\<C-y> " : "\<Space>"
 inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<Tab>"
 
+nmap <silent> gd <Plug>(coc-definition)
+nmap <leader>rn <Plug>(coc-rename)
+
 "Terminal
 noremap <F12> :bo :tabnew<CR>:terminal<CR>i
 tnoremap <ESC> <C-\><C-n>
