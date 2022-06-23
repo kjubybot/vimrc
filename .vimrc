@@ -56,10 +56,7 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'neoclide/coc.nvim'
 Plugin 'ryanoasis/vim-devicons'
 
-Plugin 'blueshirts/darcula'
 Plugin 'ayu-theme/ayu-vim'
-Plugin 'tristen/superman'
-Plugin 'fcpg/vim-fahrenheit'
 
 call vundle#end()
 filetype plugin indent on
@@ -70,6 +67,9 @@ endif
 
 let ayucolor="dark"
 colorscheme ayu
+
+"disable gopls in vim-go to avoid duplication
+let g:go_gopls_enabled = 0
 
 "airline separators
 let g:airline_left_sep = ''
