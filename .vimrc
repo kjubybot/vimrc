@@ -55,6 +55,8 @@ Plugin 'preservim/nerdcommenter'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'neoclide/coc.nvim'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'rust-lang/rust.vim'
+Plugin 'tpope/vim-fugitive'
 
 Plugin 'ayu-theme/ayu-vim'
 
@@ -69,12 +71,14 @@ let ayucolor="dark"
 colorscheme ayu
 
 "disable gopls in vim-go to avoid duplication
-"this breaks some vim-go features, so i dunno
 "let g:go_gopls_enabled = 0
 
 "airline separators
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
+
+"rust.vim autofmt
+let g:rustfmt_autosave = 1
 
 "NERDTree and NERDCommenter
 map <C-g> :NERDTreeToggle<CR>
@@ -87,10 +91,10 @@ map <C-l> <C-w>l
 map <C-h> <C-w>h
 
 "Coc
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
-inoremap <expr> <Space> pumvisible() ? "\<C-y> " : "\<Space>"
-inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<Tab>"
+inoremap <expr> <CR> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"
+inoremap <expr> <Space> coc#pum#visible() ? coc#_select_confirm() : "\<Space>"
+inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+inoremap <silent><expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<Tab>"
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <leader>rn <Plug>(coc-rename)
