@@ -57,6 +57,8 @@ Plugin 'neoclide/coc.nvim'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'rust-lang/rust.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'Yggdroot/indentLine'
 
 Plugin 'ayu-theme/ayu-vim'
 
@@ -69,6 +71,8 @@ endif
 
 let ayucolor="dark"
 colorscheme ayu
+
+hi CocMenuSel   ctermbg=237 guibg=#13151A
 
 "disable gopls in vim-go to avoid duplication
 "let g:go_gopls_enabled = 0
@@ -92,7 +96,7 @@ map <C-h> <C-w>h
 
 "Coc
 inoremap <expr> <CR> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"
-inoremap <expr> <Space> coc#pum#visible() ? coc#_select_confirm() : "\<Space>"
+"inoremap <expr> <Space> coc#pum#visible() ? coc#_select_confirm() : "\<Space>"
 inoremap <silent><expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
 inoremap <silent><expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<Tab>"
 
@@ -102,3 +106,6 @@ nmap <leader>rn <Plug>(coc-rename)
 "Terminal
 noremap <F12> :bo :tabnew<CR>:terminal<CR>i
 tnoremap <ESC> <C-\><C-n>
+
+"IndentLine
+let g:indentLine_char = '|'
