@@ -44,26 +44,23 @@ set list
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'preservim/nerdtree'
-Plugin 'fatih/vim-go'
-Plugin 'vim-airline/vim-airline'
-Plugin 'preservim/nerdcommenter'
-Plugin 'ekalinin/Dockerfile.vim'
-Plugin 'neoclide/coc.nvim'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'rust-lang/rust.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'Yggdroot/indentLine'
+Plug 'preservim/nerdtree'
+Plug 'fatih/vim-go'
+Plug 'vim-airline/vim-airline'
+Plug 'preservim/nerdcommenter'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'neoclide/coc.nvim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'rust-lang/rust.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'sheerun/vim-polyglot'
+Plug 'Yggdroot/indentLine'
 
-Plugin 'ayu-theme/ayu-vim'
+Plug 'ayu-theme/ayu-vim'
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 if exists('+termguicolors')
     set termguicolors
