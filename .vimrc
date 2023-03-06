@@ -57,6 +57,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
 Plug 'Yggdroot/indentLine'
+Plug 'junegunn/fzf'
 
 Plug 'ayu-theme/ayu-vim'
 
