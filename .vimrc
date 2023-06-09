@@ -57,7 +57,6 @@ Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
 Plug 'Yggdroot/indentLine'
-Plug 'junegunn/fzf'
 
 Plug 'ayu-theme/ayu-vim'
 
@@ -71,6 +70,7 @@ let ayucolor="dark"
 colorscheme ayu
 
 hi CocMenuSel   ctermbg=237 guibg=#13151A
+hi Comment guifg=#7B8896
 
 "disable gopls in vim-go to avoid duplication
 "let g:go_gopls_enabled = 0
